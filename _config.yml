@@ -1,9 +1,9 @@
 # Site settings
-title: Great New Blog Title
-author:
-  name: Evan Will
-  email: your-email@domain.com
-description: "Great site about Jekyll on GH-Pages."
+title: Troutt025 ePortfolio
+author: Jesse Troutt
+  name: Jesse Troutt
+  email: Troutt025@gmail.com
+description: "ePortfolio for Troutt025"
 
 # Build settings
 remote_theme: pages-themes/midnight@v0.2.0
