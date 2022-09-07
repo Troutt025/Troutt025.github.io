@@ -3,23 +3,24 @@
 //
 
 #include <iostream>
+#include <limits>
+using namespace std;
 
 bool do_even_more_custom_application_logic()
 {
-	std::cout << "Running Even More Custom Application Logic." << std::endl << std::endl;
+	cout << "Running Even More Custom Application Logic." << endl << endl;
 
 	// Buffer Overflow variables
-	short max = 32767; // Max length of short
 	short num1 = 32766; // Max length of short -1
 	short num2 = 2; // Just enough to overflow num1 if added.
 
 	// Tests for overflow
-	if ((num2 > 0) && (num1 <= max - num2)) {
+	if ((num2 > 0) && (num1 <= SHRT_MAX - num2)) {
 		short result = num1 + num2;
-		std::cout << result << std::endl << std::endl;
+		cout << result << endl << endl;
 	}
 	else { // Overflow found
-		throw std::overflow_error("Overflow Found\n");
+		throw overflow_error("Overflow Found\n");
 	}
 
 	return true;
@@ -28,16 +29,16 @@ bool do_even_more_custom_application_logic()
 void do_custom_application_logic()
 {
 	// Runs overflow function
-	std::cout << "Running Custom Application Logic." << std::endl << std::endl;
+	cout << "Running Custom Application Logic." << endl << endl;
 	try {
 		if (do_even_more_custom_application_logic()) {
-				std::cout << "Even More Custom Application Logic Succeeded." << std::endl;
+				cout << "Even More Custom Application Logic Succeeded." << endl;
 		}
 	}
 
 	// Catch for any overflow errors
-	catch (std::overflow_error& e) {
-		std::cout << "do_even_more_custom_application_logic function: " << e.what() << std::endl;
+	catch (overflow_error& e) {
+		cout << "do_even_more_custom_application_logic function: " << e.what() << endl;
 	}
 }
 
@@ -45,7 +46,7 @@ float divide(float num, float den)
 {
 	// Throws error for divide by zero
 	if (den == 0) {
-		throw std::runtime_error("Dividing by zero error\n");
+		throw runtime_error("Dividing by zero error\n");
 	}
 
 	return (num / den);
@@ -60,36 +61,36 @@ void do_division() noexcept
 	// Tries division
 	try {
 		auto result = divide(numerator, denominator);
-		std::cout << numerator << " / " << denominator << " = " << result << std::endl << std::endl;
+		cout << numerator << " / " << denominator << " = " << result << endl << endl;
 	}
 
 	// Catches a division by zero error
-	catch (std::runtime_error& e) {
-		std::cout << "do_division function: " << e.what() << std::endl;
+	catch (runtime_error& e) {
+		cout << "do_division function: " << e.what() << endl;
 	}
 }
 
 int main()
 {
-	std::cout << "Exceptions Tests!" << std::endl << std::endl;
+	cout << "Exceptions Tests!" << endl << endl;
 
 	// Tries to perform functions and catches any exceptions or errors
 	// Starting with division
 	try {
 		do_division();
 	}
-	catch (std::runtime_error& e) {
-		std::cout << "main function: " << e.what() << std::endl;
+	catch (runtime_error& e) {
+		cout << "main function: " << e.what() << endl;
 	}
 
 	// Trying application logic
 	try {
 		do_custom_application_logic();
 	}
-	catch (std::overflow_error& e) {
-		std::cout << "main function: " << e.what() << std::endl;
+	catch (overflow_error& e) {
+		cout << "main function: " << e.what() << endl;
 	}
-	catch (std::exception& e) {
-		std::cout << "main function: " << e.what() << std::endl;
+	catch (exception& e) {
+		cout << "main function: " << e.what() << endl;
 	}
 }
