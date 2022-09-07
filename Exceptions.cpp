@@ -6,7 +6,7 @@
 
 bool do_even_more_custom_application_logic()
 {
-	std::cout << "Running Even More Custom Application Logic." << std::endl;
+	std::cout << "Running Even More Custom Application Logic." << std::endl << std::endl;
 
 	// Buffer Overflow variables
 	short max = 32767; // Max length of short
@@ -16,7 +16,7 @@ bool do_even_more_custom_application_logic()
 	// Tests for overflow
 	if ((num2 > 0) && (num1 <= max - num2)) {
 		short result = num1 + num2;
-		std::cout << result << std::endl;
+		std::cout << result << std::endl << std::endl;
 	}
 	else { // Overflow found
 		throw std::overflow_error("Overflow Found\n");
@@ -28,7 +28,7 @@ bool do_even_more_custom_application_logic()
 void do_custom_application_logic()
 {
 	// Runs overflow function
-	std::cout << "Running Custom Application Logic." << std::endl;
+	std::cout << "Running Custom Application Logic." << std::endl << std::endl;
 	try {
 		if (do_even_more_custom_application_logic()) {
 				std::cout << "Even More Custom Application Logic Succeeded." << std::endl;
@@ -37,7 +37,7 @@ void do_custom_application_logic()
 
 	// Catch for any overflow errors
 	catch (std::overflow_error& e) {
-		std::cout << "Leaving Custom Application Logic." << std::endl;
+		std::cout << "do_even_more_custom_application_logic function: " << e.what() << std::endl;
 	}
 }
 
@@ -60,7 +60,7 @@ void do_division() noexcept
 	// Tries division
 	try {
 		auto result = divide(numerator, denominator);
-		std::cout << "divide(" << numerator << ", " << denominator << ") = " << result << std::endl;
+		std::cout << numerator << " / " << denominator << " = " << result << std::endl << std::endl;
 	}
 
 	// Catches a division by zero error
@@ -71,7 +71,7 @@ void do_division() noexcept
 
 int main()
 {
-	std::cout << "Exceptions Tests!" << std::endl;
+	std::cout << "Exceptions Tests!" << std::endl << std::endl;
 
 	// Tries to perform functions and catches any exceptions or errors
 	// Starting with division
