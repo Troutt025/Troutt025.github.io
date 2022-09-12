@@ -8,30 +8,30 @@ using namespace std;
 
 // Validates user input will not overflow or underflow a short variable
 short getShort() {
-	short number;
+	short shrtNum;
 
-	while (!(cin >> number) || number < SHRT_MIN || number > SHRT_MAX) {
+	while (!(cin >> shrtNum) || shrtNum < SHRT_MIN || shrtNum > SHRT_MAX) {
 		if (!cin) {
 			cin.clear();
 			cin.ignore(1000, '\n');
 		}
 		cout << "Invalid number\nPlease input a valid number: ";
 	}
-	return number;
+	return shrtNum;
 }
 
 // Validates usser input will not overflow or underflow a float variable
 float getFloat() {
-	float number;
+	float fltNum;
 
-	while (!(cin >> number) || number < FLT_MIN || number > FLT_MAX) {
+	while (!(cin >> fltNum) || fltNum < FLT_MIN || fltNum > FLT_MAX) {
 		if (!cin) {
 			cin.clear();
 			cin.ignore(1000, '\n');
 		}
 		cout << "Invalid number\nPlease input a valid number: ";
 	}
-	return number;
+	return fltNum;
 }
 
 bool do_even_more_custom_application_logic()
@@ -85,7 +85,7 @@ void do_division() noexcept
 	cout << "Beginning division section" << endl << endl;
 	// Division variables
 	float numerator = 10.0f;
-	float denominator = 2;
+	float denominator = 2.0f;
 
 	// Allows user to input variables
 	cout << "Please input numerator: ";
@@ -190,4 +190,4 @@ int main()
 	catch (exception& e) {
 		cout << "main function: " << e.what() << endl;
 	}
-}
+}1
