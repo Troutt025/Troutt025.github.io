@@ -13,7 +13,7 @@ short getShort() {
 	while (!(cin >> shrtNum) || shrtNum < SHRT_MIN || shrtNum > SHRT_MAX) {
 		if (!cin) {
 			cin.clear();
-			cin.ignore(1000, '\n');
+			cin.ignore(1024, '\n');
 		}
 		cout << "Invalid number\nPlease input a valid number: ";
 	}
@@ -27,7 +27,7 @@ float getFloat() {
 	while (!(cin >> fltNum) || fltNum < FLT_MIN || fltNum > FLT_MAX) {
 		if (!cin) {
 			cin.clear();
-			cin.ignore(1000, '\n');
+			cin.ignore(1024, '\n');
 		}
 		cout << "Invalid number\nPlease input a valid number: ";
 	}
@@ -119,7 +119,7 @@ float multiply(short plicand, short plier)
 	else if (((plier > 0) && (plicand > 0) && (plicand > SHRT_MAX / plier)) || ((plier < 0) && (plicand < 0) && (plicand < SHRT_MAX / plier))) {
 		throw overflow_error("Overflow error\n");
 	} // Tests for underflow
-	else if (((plier > 0) && (plicand < 0) && (plicand < SHRT_MAX / plier)) || ((plier < 0) && (plicand > 0) && (plicand > SHRT_MAX / plier))) {
+	else if (((plier > 0) && (plicand < 0) && (plicand < SHRT_MIN / plier)) || ((plier < 0) && (plicand > 0) && (plicand > SHRT_MIN / plier))) {
 		throw underflow_error("Underflow error\n");
 	}
 	else {
@@ -190,4 +190,4 @@ int main()
 	catch (exception& e) {
 		cout << "main function: " << e.what() << endl;
 	}
-}1
+}
