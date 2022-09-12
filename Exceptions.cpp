@@ -6,6 +6,34 @@
 #include <limits>
 using namespace std;
 
+// Validates user input will not overflow or underflow a short variable
+short getShort() {
+	short number;
+
+	while (!(cin >> number) || number < SHRT_MIN || number > SHRT_MAX) {
+		if (!cin) {
+			cin.clear();
+			cin.ignore(1000, '\n');
+		}
+		cout << "Invalid number\nPlease input a valid number: ";
+	}
+	return number;
+}
+
+// Validates usser input will not overflow or underflow a float variable
+float getFloat() {
+	float number;
+
+	while (!(cin >> number) || number < FLT_MIN || number > FLT_MAX) {
+		if (!cin) {
+			cin.clear();
+			cin.ignore(1000, '\n');
+		}
+		cout << "Invalid number\nPlease input a valid number: ";
+	}
+	return number;
+}
+
 bool do_even_more_custom_application_logic()
 {
 	cout << "Running Even More Custom Application Logic." << endl << endl;
@@ -54,9 +82,21 @@ float divide(float num, float den)
 
 void do_division() noexcept
 {
+	cout << "Beginning division section" << endl << endl;
 	// Division variables
 	float numerator = 10.0f;
-	float denominator = 0;
+	float denominator = 2;
+
+	// Allows user to input variables
+	cout << "Please input numerator: ";
+	numerator = getFloat();
+	cout << endl << endl;
+
+	cout << "Please input denominator: ";
+	denominator = getFloat();
+	cout << endl << endl;
+
+	cout << "Performing division" << endl << endl;
 
 	// Tries division
 	try {
@@ -70,6 +110,55 @@ void do_division() noexcept
 	}
 }
 
+float multiply(short plicand, short plier)
+{
+	// Tests if either numbers are zero, if so no overflow/underflow could happen
+	if (plier == 0 || plicand == 0) {
+		return (plicand * plier);
+	} // Tests for overflow
+	else if (((plier > 0) && (plicand > 0) && (plicand > SHRT_MAX / plier)) || ((plier < 0) && (plicand < 0) && (plicand < SHRT_MAX / plier))) {
+		throw overflow_error("Overflow error\n");
+	} // Tests for underflow
+	else if (((plier > 0) && (plicand < 0) && (plicand < SHRT_MAX / plier)) || ((plier < 0) && (plicand > 0) && (plicand > SHRT_MAX / plier))) {
+		throw underflow_error("Underflow error\n");
+	}
+	else {
+		return (plicand * plier);
+	}
+}
+
+void do_multiplication() noexcept
+{
+	cout << "Beginning multiplication section" << endl << endl;
+	
+	// Multiplication variables
+	short multiplicand = 8;
+	short multiplier = 8;
+
+	// Allows user to input variables
+	cout << "Please input multiplicand: ";
+	multiplicand = getShort();
+	cout << endl << endl;
+
+	cout << "Please input multiplier: ";
+	multiplier = getShort();
+	cout << endl << endl;
+
+	// Tries multiplication
+	try {
+		auto result = multiply(multiplicand, multiplier);
+		cout << multiplicand << " * " << multiplier << " = " << result << endl << endl;
+	}
+
+	// Catches an underflow or overflow error
+	catch (overflow_error& e) {
+		cout << "do_multiplication function: " << e.what() << endl;
+	}
+	catch (underflow_error& e) {
+		cout << "do_multiplication function: " << e.what() << endl;
+	}
+}
+
 int main()
 {
 	cout << "Exceptions Tests!" << endl << endl;
@@ -80,6 +169,14 @@ int main()
 		do_division();
 	}
 	catch (runtime_error& e) {
+		cout << "main function: " << e.what() << endl;
+	}
+
+	// Trying multiplication
+	try {
+		do_multiplication();
+	}
+	catch (overflow_error & e) {
 		cout << "main function: " << e.what() << endl;
 	}
 
