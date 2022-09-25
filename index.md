@@ -13,6 +13,7 @@
 ### Introduction
 My name is Jesse Troutt. I am an alumni at Southern New Hampshire University as an Honor Roll student.
 I am majoring in Computer Science with a concentration in Software Engineering.
+
 This is my portfolio where I have included:
  - A professional self-assessment detailing my work throughout my studies and the enhancements made to my chosen artifacts
  - A code review of my artifacts chosen along with enhancements
