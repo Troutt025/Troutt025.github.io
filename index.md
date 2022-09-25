@@ -18,5 +18,6 @@ This is my portfolio where I have included:
  - A code review of my artifacts chosen along with enhancements
  - My Exceptions artifact which covers Software Design and Engineering along with Algorithms and Data Structures
  - My PMTool artifact which is a personal project enhanced to include Databases
+
 Each artifact is chosen to meet the specific criteria of the CS-499 Computer Science Capstone course where I enhance the artifacts to show my skills as a Software Engineer.
 * * *
