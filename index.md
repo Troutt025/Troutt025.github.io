@@ -22,3 +22,7 @@ This is my portfolio where I have included:
 
 Each artifact is chosen to meet the specific criteria of the CS-499 Computer Science Capstone course where I enhance the artifacts to show my skills as a Software Engineer.
 * * *
+
+### Self-Assessment
+
+
