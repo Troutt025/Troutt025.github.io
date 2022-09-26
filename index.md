@@ -30,4 +30,33 @@ Each artifact is chosen to meet the specific criteria of the CS-499 Computer Sci
 
 ### Self-Assessment
 
+* * *
+
+### Code Review
+
+[Code Review Video](https://youtu.be/udnlpyADtt4)
+
+This is my code review for both artifacts across all categories.
+The video covers an overview of what each artifact is meant to accomplish, as well as going through a checklist of review items pertaining to the code.
+
+* * *
+
+### Software Design and Engineering: Exceptions
+
+-----Software design and engineering analysis-----
+
+* * *
+
+### Algorithms and Data Structure: Exceptions
+
+-----Algorithms and Data Structure analysis-----
+
+* * *
+
+### Databases: PMTool
+
+-----Databases Analysis-----
+
+* * *
+
 
