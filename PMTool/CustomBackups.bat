@@ -2,7 +2,7 @@
 SETLOCAL enabledelayedexpansion
 
 REM 
-REM Title: Puffer Backups
+REM Title: Custom Backups
 REM Author: Jesse Troutt
 REM Date: 09-26-2022
 REM
@@ -44,21 +44,21 @@ IF EXIST c:\deltav\dvdata\download\dt.scr (
 	)
 )
 
-REM creates the "Puffer" folder, dated PM folder, and "Backups" folder
+REM creates the dated PM folder, and "Backups" folder
 IF EXIST d:\ (
-	mkdir D:\Puffer\%stamp%PM\Backups
+	mkdir D:\%stamp%PM\Backups
 	set backupsLocation=d
 ) ELSE (
-	mkdir C:\Puffer\%stamp%PM\Backups
+	mkdir C:\%stamp%PM\Backups
 	set backupsLocation=c
 )
 
 REM Gathers all backups, graphics-iFix, POWERUP, Charts, sound, and .fhx backup
-ROBOCOPY !DVdrvltr!:\DeltaV\DVData\Graphics-iFix !backupsLocation!:\Puffer\%stamp%PM\Backups\Graphics-iFix\ /E /COPYALL
-ROBOCOPY !DVdrvltr!:\DeltaV\DVData\POWERUP !backupsLocation!:\Puffer\%stamp%PM\Backups\POWERUP\ /E /COPYALL
-ROBOCOPY !DVdrvltr!:\DeltaV\DVData\Charts !backupsLocation!:\Puffer\%stamp%PM\Backups\Charts\ /E /COPYALL
-ROBOCOPY !DVdrvltr!:\DeltaV\DVData\sound !backupsLocation!:\Puffer\%stamp%PM\Backups\sound\ /E /COPYALL
-Start C:\DeltaV\bin\dbImpExpClient.exe -de !backupsLocation!:\Puffer\%stamp%PM\Backups
+ROBOCOPY !DVdrvltr!:\DeltaV\DVData\Graphics-iFix !backupsLocation!:\%stamp%PM\Backups\Graphics-iFix\ /E /COPYALL
+ROBOCOPY !DVdrvltr!:\DeltaV\DVData\POWERUP !backupsLocation!:\%stamp%PM\Backups\POWERUP\ /E /COPYALL
+ROBOCOPY !DVdrvltr!:\DeltaV\DVData\Charts !backupsLocation!:\%stamp%PM\Backups\Charts\ /E /COPYALL
+ROBOCOPY !DVdrvltr!:\DeltaV\DVData\sound !backupsLocation!:\%stamp%PM\Backups\sound\ /E /COPYALL
+Start C:\DeltaV\bin\dbImpExpClient.exe -de !backupsLocation!:\%stamp%PM\Backups
 
 REM Gather info from DV nodes from dt.scr for "Copy Hotfixes"
 IF NOT !DVData! == DOESNOTEXIST (
