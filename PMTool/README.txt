@@ -1,21 +1,21 @@
 PMTool README
 
-4/28/2022
+9/26/2022
 
 Version 1.0
 
 ------------------------------------------------
 ------------------------------------------------
-The PM Tool consists of 2 .bat files.
+The Puffer PM Tool consists of 2 .bat files.
 
-CustomBackups.bat
+PufferBackups.bat
 CopyHotfixes.bat
 
-CustomBackups.bat doesn't require any specific changes to work. It will work on any system that has DeltaV installed on the D: drive.
+PufferBackups.bat doesn't require any specific changes to work. It will work on any DeltaV system.
 
-CopyHotfixes.bat requires adding hotfixes to the PMTool\Hotfix\Workstation and PMTool\Hotfix\Server folders. Then editing the Workstations.txt and Servers.txt to include the names
-of the workstations and servers.
+CopyHotfixes.bat requires adding hotfixes to the PMTool\Hotfix\Workstation and PMTool\Hotfix\Server folders.
 
+If the script fails to find dt.src, manual input will be necessary.
 Move the hotfixes you wish to install on the workstations into the Workstation folder and edit the Workstations.txt document to include all workstation names seperated by a line.
 Example:
 WS1
