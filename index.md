@@ -69,7 +69,7 @@ I specifically chose this artifact as each function has specific algorithms such
 
 I met my course objectives planned with each enhancement, as well as made an extra enhancement I had not initially planned. I was able to include my original algorithms for multiplication while adding algorithms for underflow handling and user input validation. 
 
-In the process of enhancing this artifact I was met with a few challenges, some self-induced. I had to come up with an algorithm for solving the issue of underflow in the multiplication function, as I had overflow handled and had not yet attempted underflow. A simple mistake in checking against the numerical max of a short made it where anytime a negative number was input the program would automatically underflow. I was able to quickly fix this once I realized I should be checking against the
+In the process of enhancing this artifact I was met with a few challenges, some self-induced. I had to come up with an algorithm for solving the issue of underflow in the multiplication function, as I had overflow handled and had not yet attempted underflow. A simple mistake in checking against the numerical max of a short made it where anytime a negative number was input the program would automatically underflow. I was able to quickly fix this once I realized I should be checking against the numerical minimum instead. I also wanted the user to be able to input whatever number they wished for multiplication and division, which caused its own problems. I know users should not be able to input whatever they want without some kind of validation, so I had to create an algorithm for checking user input to ensure the program's security.
 
 * * *
 
