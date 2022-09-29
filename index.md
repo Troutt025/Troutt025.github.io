@@ -13,7 +13,7 @@
 
 * * *
 
-### Introduction
+## Introduction
 
 My name is Jesse Troutt. I am an alumni at Southern New Hampshire University as an Honor Roll student.
 I am majoring in Computer Science with a concentration in Software Engineering.
@@ -28,11 +28,11 @@ Each artifact is chosen to meet the specific criteria of the CS-499 Computer Sci
 
 * * *
 
-### Self-Assessment
+## Self-Assessment
 
 * * *
 
-### Code Review
+## Code Review
 
 [Code Review Video](https://youtu.be/udnlpyADtt4)
 
@@ -57,7 +57,7 @@ I ran into a few challenges when enhancing my project. The first was that after 
 
 * * *
 
-### Algorithms and Data Structure: Exceptions
+## Algorithms and Data Structure: Exceptions
 
 [Link to enhanced Exceptions code](https://github.com/Troutt025/Troutt025.github.io/blob/main/Exceptions.cpp)
 
@@ -65,7 +65,7 @@ I ran into a few challenges when enhancing my project. The first was that after 
 
 * * *
 
-### Databases: PMTool
+## Databases: PMTool
 
 -----Databases Analysis-----
 
