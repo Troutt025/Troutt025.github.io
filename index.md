@@ -44,6 +44,7 @@ The video covers an overview of what each artifact is meant to accomplish, as we
 ### Software Design and Engineering: Exceptions
 
 [Link to enhanced Exceptions code](https://github.com/Troutt025/Troutt025.github.io/blob/main/Exceptions.cpp)
+
 [Link to original Exceptions code as .zip file](https://github.com/Troutt025/Troutt025.github.io/blob/main/Exceptions.zip)
 
 This artifact is called Exceptions. It is intended to showcase the handling of exceptions created by purposely causing overflows, errors, and other exceptions and then handling those exceptions without compromising security and integrity. It was created for class CS-405 in April of 2022.
