@@ -1,5 +1,5 @@
 //
-// Exceptions.cpp : This file contains the 'main' function. Program execution begins and ends there.
+// Exceptions.cpp : Program is meant to test user input for any buffer overflow or underflow. Also tests for divide by zero errors. 
 //
 
 #include <iostream>
@@ -10,6 +10,7 @@ using namespace std;
 short getShort() {
 	short shrtNum;
 
+	// User input checks for short variable
 	while (!(cin >> shrtNum) || shrtNum < SHRT_MIN || shrtNum > SHRT_MAX) {
 		if (!cin) {
 			cin.clear();
@@ -24,6 +25,7 @@ short getShort() {
 float getFloat() {
 	float fltNum;
 
+	// User input checks for float variable
 	while (!(cin >> fltNum) || fltNum < FLT_MIN || fltNum > FLT_MAX) {
 		if (!cin) {
 			cin.clear();
@@ -60,12 +62,12 @@ void do_custom_application_logic()
 	cout << "Running Custom Application Logic." << endl << endl;
 	try {
 		if (do_even_more_custom_application_logic()) {
-				cout << "Even More Custom Application Logic Succeeded." << endl;
+			cout << "Even More Custom Application Logic Succeeded." << endl;
 		}
 	}
 
 	// Catch for any overflow errors
-	catch (overflow_error& e) {
+	catch (overflow_error & e) {
 		cout << "do_even_more_custom_application_logic function: " << e.what() << endl;
 	}
 }
@@ -87,7 +89,7 @@ void do_division() noexcept
 	float numerator = 10.0f;
 	float denominator = 2.0f;
 
-	// Allows user to input variables
+	// Allows user to input variables for numerator and denominator to test dividing
 	cout << "Please input numerator: ";
 	numerator = getFloat();
 	cout << endl << endl;
@@ -105,7 +107,7 @@ void do_division() noexcept
 	}
 
 	// Catches a division by zero error
-	catch (runtime_error& e) {
+	catch (runtime_error & e) {
 		cout << "do_division function: " << e.what() << endl;
 	}
 }
@@ -130,7 +132,7 @@ float multiply(short plicand, short plier)
 void do_multiplication() noexcept
 {
 	cout << "Beginning multiplication section" << endl << endl;
-	
+
 	// Multiplication variables
 	short multiplicand = 8;
 	short multiplier = 8;
@@ -151,10 +153,10 @@ void do_multiplication() noexcept
 	}
 
 	// Catches an underflow or overflow error
-	catch (overflow_error& e) {
+	catch (overflow_error & e) {
 		cout << "do_multiplication function: " << e.what() << endl;
 	}
-	catch (underflow_error& e) {
+	catch (underflow_error & e) {
 		cout << "do_multiplication function: " << e.what() << endl;
 	}
 }
@@ -164,15 +166,15 @@ int main()
 	cout << "Exceptions Tests!" << endl << endl;
 
 	// Tries to perform functions and catches any exceptions or errors
-	// Starting with division
+	// Starting with division function
 	try {
 		do_division();
 	}
-	catch (runtime_error& e) {
+	catch (runtime_error & e) {
 		cout << "main function: " << e.what() << endl;
 	}
 
-	// Trying multiplication
+	// Trying multiplication through function with catches for errors
 	try {
 		do_multiplication();
 	}
@@ -180,14 +182,14 @@ int main()
 		cout << "main function: " << e.what() << endl;
 	}
 
-	// Trying application logic
+	// Trying application logic trhough function with catches for errors
 	try {
 		do_custom_application_logic();
 	}
-	catch (overflow_error& e) {
+	catch (overflow_error & e) {
 		cout << "main function: " << e.what() << endl;
 	}
-	catch (exception& e) {
+	catch (exception & e) {
 		cout << "main function: " << e.what() << endl;
 	}
 }
