@@ -6,12 +6,12 @@ Version 1.0
 
 ------------------------------------------------
 ------------------------------------------------
-The Puffer PM Tool consists of 2 .bat files.
+The PMTool consists of 2 .bat files.
 
-PufferBackups.bat
+CustomBackups.bat
 CopyHotfixes.bat
 
-PufferBackups.bat doesn't require any specific changes to work. It will work on any DeltaV system.
+CustomBackups.bat doesn't require any specific changes to work. It will work on any DeltaV system.
 
 CopyHotfixes.bat requires adding hotfixes to the PMTool\Hotfix\Workstation and PMTool\Hotfix\Server folders.
 
