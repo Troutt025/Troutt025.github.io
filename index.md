@@ -59,7 +59,9 @@ I ran into a few challenges when enhancing my project. The first was that after 
 
 ### Algorithms and Data Structure: Exceptions
 
------Algorithms and Data Structure analysis-----
+[Link to enhanced Exceptions code](https://github.com/Troutt025/Troutt025.github.io/blob/main/Exceptions.cpp)
+
+[Link to original Exceptions code as .zip file](https://github.com/Troutt025/Troutt025.github.io/blob/main/Exceptions.zip)
 
 * * *
 
