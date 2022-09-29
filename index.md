@@ -63,6 +63,14 @@ I ran into a few challenges when enhancing my project. The first was that after 
 
 [Link to original Exceptions code as .zip file](https://github.com/Troutt025/Troutt025.github.io/blob/main/Exceptions.zip)
 
+This artifact is the same as artifact one, a program titled Exceptions. It is intended to showcase the handling of exceptions created by purposely causing overflows, errors, and other exceptions and then handling those exceptions without compromising security and integrity. It was created for class CS-405 in April of 2022.
+
+I specifically chose this artifact as each function has specific algorithms such as division, overflow handling, and exception handling. I also improved the artifact by including algorithms for multiplication, user input handling, and underflow handling. In doing so I was able to meet multiple course outcomes. With the inclusion of user input handling I showed a developed security mindset that anticipates adversarial exploits in software architecture and designs to expose potential vulnerabilities, mitigate design flaws, and ensure privacy and enhanced security of data and resources. In the multiplication function and variable input checks I was able to design and evaluate computing solutions that solve a given problem using algorithmic principles and computer science practices and standards appropriate to its solution, while managing the trade-offs involved in design choices. 
+
+I met my course objectives planned with each enhancement, as well as made an extra enhancement I had not initially planned. I was able to include my original algorithms for multiplication while adding algorithms for underflow handling and user input validation. 
+
+In the process of enhancing this artifact I was met with a few challenges, some self-induced. I had to come up with an algorithm for solving the issue of underflow in the multiplication function, as I had overflow handled and had not yet attempted underflow. A simple mistake in checking against the numerical max of a short made it where anytime a negative number was input the program would automatically underflow. I was able to quickly fix this once I realized I should be checking against the
+
 * * *
 
 ## Databases: PMTool
