@@ -6,7 +6,8 @@ REM Title: Custom Backups
 REM Author: Jesse Troutt
 REM Date: 09-26-2022
 REM
-REM README: This file was created to gather backups of a typical DeltaV system. You still need to copy the backups to another computer.
+REM README: This file was created to gather backups of a typical DeltaV system, as well as search through the dt.scr file for machine names and OS types to sort into a database of machines.
+REM         You still need to copy the backups to another computer or flash drive for proper backup management.
 
 REM Variables for DeltaV drive letters and Machine information
 set DVdrvltr=DOESNOTEXIST
@@ -69,7 +70,7 @@ IF NOT !DVData! == DOESNOTEXIST (
 		for /f "delims=' tokens=2" %%g in ("!strNodeName!") do (set strNodeName=%%g)
 		for /f "delims== tokens=2" %%g in ("!strNodeType!") do (set strNodeType=%%g)
 
-		REM Check if the gathered node is a workstation machine and see if it's alive to gather info and add to machine list
+		REM Check if machine is alive to gather info and add to machine list
 		IF "!strNodeType!" EQU "WS" (
 			echo !strNodeName!
 
@@ -80,8 +81,7 @@ IF NOT !DVData! == DOESNOTEXIST (
 				for /f "tokens=3-5 delims== " %%g in ('wmic /NODE:"!strNodeName!" os get Caption /value ^| find "Windows" ') do (set "strWinEdition=%%g %%h %%i")
 
 				echo !strWinEdition!
-        
-        REM Check if machine is server edition or not to add to correct document
+
 				IF NOT "x!strWinEdition:Server=!"=="x!strWinEdition!" (
 					echo !strNodeName!>>Machines\Servers.txt
 				) ELSE (
