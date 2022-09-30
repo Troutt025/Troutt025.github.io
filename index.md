@@ -79,6 +79,12 @@ In the process of enhancing this artifact I was met with a few challenges, some 
 
 [Link to original PMTool code as .zip file](https://github.com/Troutt025/Troutt025.github.io/blob/main/PMTool.zip)
 
+This artifact is titled PMTool. It is a tool I created for my current job that is designed to make a backup of a DeltaV system and then copy hotfix files across the network to all DeltaV associated machines. This task was originally all done manually which could take hours to complete. With this tool I have significantly reduced the time necessary to complete the tasks. 
+
+I chose this artifact as it has a database of machines that are used as reference to copy hotfix files out to. Originally, the machines needed to be input manually, which could take a while if the system was large enough. My added enhancements made it possible for the program to automatically grab the machine names and put them in the database itself. Eliminating the need for manual entry. With my enhancements I have demonstrated an ability to use well-founded and innovative techniques in computing practices for the purpose of implementing computer solutions that deliver value and accomplish industry-specific goals. The specific goal being accomplishing a task in a reduced amount of time and effort. 
+
+During the enhancement of this artifact I faced a lot of challenges. I have not had a lot of experience writing in batch script, so a lot of research was necessary. Understanding how loops are created and what tools I had available were all relatively new to me. Another challenge was how variables work in batch script, using the variables as well as outputting them to a document was a bit of a challenge that was overcome with a bit of research. I learned a lot about Windows tools available in batch as well as how variables and loops work within it.
+
 * * *
 
 
