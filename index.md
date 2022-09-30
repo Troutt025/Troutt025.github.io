@@ -41,7 +41,7 @@ The video covers an overview of what each artifact is meant to accomplish, as we
 
 * * *
 
-### Software Design and Engineering: Exceptions
+## Software Design and Engineering: Exceptions
 
 [Link to enhanced Exceptions code](https://github.com/Troutt025/Troutt025.github.io/blob/main/Exceptions.cpp)
 
