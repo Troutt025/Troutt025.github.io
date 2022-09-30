@@ -3,8 +3,8 @@ REM
 REM Title:  Copy Hotfixes
 REM Date:   9/28/2022
 REM
-REM README: This file is not to be changed. To add or remove machines, please edit the Servers.txt and Workstations.txt files.
-REM         
+REM README: This file is intended to use the database of machines created with the CopyBackups file to copy hotfixes to all machines within the database.
+REM         This file is not to be changed. To add or remove machines, please edit the Servers.txt and Workstations.txt files.
 REM 
 
 REM Variable for Hotfix location
